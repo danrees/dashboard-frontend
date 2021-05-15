@@ -17,7 +17,7 @@ export default function Weather({weatherData}) {
         setWeatherData(Number(weatherData?.main?.temp - 272).toFixed(1))
         const icon = weatherData.weather[0].icon;
         setWIcon(`https://openweathermap.org/img/w/${icon}.png`)
-    },1000);
+    },5000);
     return (
         <Card variant="outlined">
             <CardContent >
