@@ -12,6 +12,7 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content={theme.palette.primary.main} />
       </Head>      
       <Navbar></Navbar>
       <Container maxWidth="md">

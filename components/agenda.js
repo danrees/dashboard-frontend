@@ -1,4 +1,7 @@
 import { Card, CardContent, Typography } from "@material-ui/core";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText"
 import pollWeather from "../lib/polling";
 import { useState } from "react";
 
@@ -17,11 +20,13 @@ export default function Agenda() {
         <Card variant="outlined">
             <CardContent>
                 <Typography>
-                    <ul>
+                    <List>
                         {agenda.map(event => (
-                            <li key={event.id}>{event.start?.date} - {event.summary}</li>
+                            <ListItem>
+                                <ListItemText key={event?.id}>{event?.start?.date} - {event?.summary}</ListItemText>
+                            </ListItem>
                         ))}
-                    </ul>
+                    </List>
                 </Typography>
             </CardContent>
         </Card>
